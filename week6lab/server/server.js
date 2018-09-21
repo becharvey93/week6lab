@@ -8,6 +8,6 @@ app.use (bodyParser.json());
 app.use (bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname , '../dist/chat')));
 require('./routes.js')(app, path); 
-require('./sockets.js')(app, io); 
+require('./socket.js')(app, io); 
 require('./listen.js')(http);
  
